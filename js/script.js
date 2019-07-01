@@ -54,12 +54,27 @@ let output =`
 <img src="${movie.Poster}" class="thumbnail">
 </div>
 <div class="col-md-8">
+<h2>${movie.Title}</h2>
+<ul class="list-group">
+    <li class="list-group-item"><strong>Release Year:</strong>${movie.Released}</li>
+    <li class="list-group-item"><strong>Genre:</strong>${movie.Genre}</li>
+    <li class="list-group-item"><strong>Actors:</strong>${movie.Actors}</li>
+    <li class="list-group-item"><strong>Rated:</strong>${movie.Rated}</li>
+    <li class="list-group-item"><strong>Language:</strong>${movie.Language}</li>
+    <li class="list-group-item"><strong>Runtime:</strong>${movie.Runtime}</li>
+    <li class="list-group-item"><strong>imdbRating:</strong>${movie.imdbRating}</li>
+    <li class="list-group-item"><strong>Writer:</strong>${movie.Writer}</li>
+</ul>
 </div>
 </div>
-
+<div class="row">
+<div class="well">
+<h3>Plot</h3>
+${movie.Plot}
+<div>
 
 `
-$('movie').html(output);
+$('#movie').html(output);
 })
 .catch( (err) => {
 console.log(err);
