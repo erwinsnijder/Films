@@ -21,3 +21,6 @@ body {
 .navbar-brand {
   color: white;
 }
+.list-group {
+  background-color: #333;
+}
