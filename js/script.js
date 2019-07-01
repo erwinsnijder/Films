@@ -14,6 +14,7 @@ console.log(response);
 let movies = response.data.Search;
 let output = "";
 $.each(movies, (index, movie) => {
+// var iets (if 1=1) ? true :false;
 output += `
 <div class="col-md-3">
 <div class="well text-center">
@@ -31,4 +32,22 @@ $('#movies').html(output);
 console.log(err);
 });
 
+}
+
+function movieSelected(id){
+sessionStorage.setItem('movieId', id);
+window.location = 'movie.html';
+return false;
+}
+
+function getMovie(){
+let movieId = sessionStorage.getItem('movieId');
+
+axios.get('https://www.omdbapi.com/?i='+movieId+'&apikey=d62e2d9d')
+.then( (response) => {
+console.log(response);
+})
+.catch( (err) => {
+console.log(err);
+});
 }
