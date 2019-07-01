@@ -51,14 +51,15 @@ let movie = response.data;
 let output =`
 <div class="row">
 <div class="col-md-4">
-
-<div>
+<img src="${movie.Poster}" class="thumbnail">
+</div>
 <div class="col-md-8">
+</div>
 </div>
 
 
 `
-
+$('movie').html(output);
 })
 .catch( (err) => {
 console.log(err);
