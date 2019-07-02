@@ -51,7 +51,7 @@ let movie = response.data;
 let output =`
 <div class="row">
 <div class="col-md-4">
-<img src="${movie.Poster}" class="thumbnail";">
+<img src="${movie.Poster}" class="thumbnail style= "box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19)";"">
 </div>
 <div class="col-md-8">
 <h2>${movie.Title} +(${movie.Year})</h2>

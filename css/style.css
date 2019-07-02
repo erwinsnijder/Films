@@ -5,18 +5,22 @@
   @media(min-width:960px){
     #movies .col-md-3 .well{
       height: 480px;
+      
     }
   
     #movies .col-md-3 img{
       height:240px;
+     
     }
 }
 body {
+  background-image:url('stars.jpg');
   background-color: #333;
   color:white;
 }
 .jumbotron {
-  background-color: rgba(255, 255, 255, 0.10);
+  background-image:url('stars.jpg');
+  background-color: rgba(128, 128, 128, 0.20);
   box-shadow: 1px 1px 5px white;
 }
 .navbar-brand {
