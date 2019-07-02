@@ -8,13 +8,13 @@ $(document).ready(() => {
 
 function getMovies(searchText){
 console.log(searchText);
-axios.get('https://www.omdbapi.com/?s='+searchText+'&apikey=d62e2d9d')
+axios.get('https://www.omdbapi.com/?s='+searchText+'&page=1&apikey=d62e2d9d')
 .then( (response) => {
 console.log(response);
 let movies = response.data.Search;
 let output = "";
 $.each(movies, (index, movie) => {
-// var iets (if 1=1) ? true :false;
+
 output += `
 <div class="col-md-3">
 <div class="well text-center">
@@ -51,7 +51,7 @@ let movie = response.data;
 let output =`
 <div class="row">
 <div class="col-md-4">
-<img src="${movie.Poster}" class="thumbnail">
+<img src="${movie.Poster}" class="thumbnail";">
 </div>
 <div class="col-md-8">
 <h2>${movie.Title} +(${movie.Year})</h2>
@@ -81,5 +81,6 @@ $('#movie').html(output);
 })
 .catch( (err) => {
 console.log(err);
+
 });
 }
