@@ -14,18 +14,21 @@
     }
 }
 body {
-  background-image:url('stars.jpg');
+  background-image: url('stars.jpg');
   background-color: #333;
   color:white;
 }
 .jumbotron {
-  background-image:url('stars.jpg');
-  background-color: rgba(128, 128, 128, 0.20);
-  box-shadow: 1px 1px 5px white;
+  background-color: rgba(0, 0, 0, 0.20);
+  box-shadow: inset 1px 1px 5px 1px white;
 }
 .navbar-brand {
   color: white;
 }
 .list-group {
   background-color: #333;
+}
+
+.text-center:focus  {
+  outline:none !important;
 }
